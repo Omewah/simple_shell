@@ -33,7 +33,6 @@ int _shellexit_pfunc(intel_t *intel)
  * @intel: Structure containing arguments
  * Return: 0 (Success)
  */
-
 int _changedir_pfunc(intel_t *intel)
 {
 	char *str, *z;
@@ -75,8 +74,7 @@ int _changedir_pfunc(intel_t *intel)
 	{
 		envset_pfunc(intel, "OLDPWD", getenvIN(intel, "PWD="));
 		envset_pfunc(intel, "PWD", getcwd(buff_size, 1024));
-	}
-	return (0);
+	} return (0);
 }
 
 /**

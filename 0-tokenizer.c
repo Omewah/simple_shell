@@ -19,7 +19,8 @@ char **splitstr_pfunc(char *stringIN, char *del)
 	if (!del)
 		del = " ";
 	for (a = 0; stringIN[a] != '\0'; a++)
-		if (!_defchar_pfunc(stringIN[a], del) && (_defchar_pfunc(stringIN[a + 1], del) || !stringIN[a + 1]))
+		if (!_defchar_pfunc(stringIN[a], del) &&
+				(_defchar_pfunc(stringIN[a + 1], del) || !stringIN[a + 1]))
 			num++;
 
 	if (num == 0)

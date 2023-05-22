@@ -29,7 +29,8 @@ int remove_alias_pfunc(intel_t *intel, char *stringIN)
 	d = *a;
 	*a = 0;
 	rem = del_nodeIN(&(intel->alias_nodeIN),
-		nodeIX_pfunc(intel->alias_nodeIN, nodeST_pfunc(intel->alias_nodeIN, stringIN, -1)));
+		nodeIX_pfunc(intel->alias_nodeIN,
+			nodeST_pfunc(intel->alias_nodeIN, stringIN, -1)));
 	*a = d;
 	return (rem);
 }
@@ -93,7 +94,7 @@ int _alias_pfunc(intel_t *intel)
 		nnode = intel->alias_nodeIN;
 		while (nnode)
 		{
-			return_alias_pfunc(nnode);
+			(return_alias_pfunc(nnode));
 			nnode = nnode->next_nodeIN;
 		}
 		return (0);
@@ -104,7 +105,8 @@ int _alias_pfunc(intel_t *intel)
 		if (sub)
 			define_alias_pfunc(intel, intel->strargvIN[a]);
 		else
-			return_alias_pfunc(nodeST_pfunc(intel->alias_nodeIN, intel->strargvIN[a], '='));
+			return_alias_pfunc(nodeST_pfunc(intel->alias_nodeIN,
+						intel->strargvIN[a], '='));
 	}
 
 	return (0);

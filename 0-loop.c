@@ -97,7 +97,8 @@ void locate_cmd_pfunc(intel_t *intel)
 	if (!b)
 		return;
 
-	pFIND = locate_path_pfunc(intel, getenvIN(intel, "PATH="), intel->strargvIN[0]);
+	pFIND = locate_path_pfunc(intel, getenvIN(intel, "PATH="),
+			intel->strargvIN[0]);
 	if (pFIND)
 	{
 		intel->strpathIN = pFIND;
@@ -106,7 +107,8 @@ void locate_cmd_pfunc(intel_t *intel)
 	else
 	{
 		if ((_shellact_pfunc(intel) || getenvIN(intel, "PATH=")
-			|| intel->strargvIN[0][0] == '/') && _cmdexe_pfunc(intel, intel->strargvIN[0]))
+			|| intel->strargvIN[0][0] == '/') && _cmdexe_pfunc(intel,
+				intel->strargvIN[0]))
 			fork_cmd_pfunc(intel);
 		else if (*(intel->strargIN) != '\n')
 		{

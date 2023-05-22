@@ -16,7 +16,7 @@ void sigintH_pfunc(__attribute__((unused))int signalnum)
  * chain_buf_pfunc - the buffer containing chained commands
  * @intel: struct containing argument
  * @b: the buffer address of the chained command
- * @lgthb: the pointer to the length of the buffer 
+ * @lgthb: the pointer to the length of the buffer
  * Return: the byte of chained command to be read
  */
 ssize_t chain_buf_pfunc(intel_t *intel, char **b, size_t *lgthb)

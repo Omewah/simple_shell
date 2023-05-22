@@ -13,7 +13,8 @@ char *_hist_pfunc(intel_t *intel)
 	z = getenvIN(intel, "HOME=");
 	if (!z)
 		return (NULL);
-	hist = malloc(sizeof(char) * (_lenstrn_pfunc(z) + _lenstrn_pfunc(HIST_FILE) + 2));
+	hist = malloc(sizeof(char) * (_lenstrn_pfunc(z)
+				+ _lenstrn_pfunc(HIST_FILE) + 2));
 	if (!hist)
 		return (NULL);
 	hist[0] = 0;

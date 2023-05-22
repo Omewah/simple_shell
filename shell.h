@@ -44,7 +44,7 @@ typedef struct LIST_STRINGIN
  * @strargIN: string containing arguements gotten from the getline function
  * @strargvIN: arrays of strings to be generated from the string argument
  * @strpathIN: the path for the current command input
- * @strarg_counterIN: a counter that will count the number of arguments in a string
+ * @strarg_counterIN: appends the number of arguments in a string
  * @linecounterIN: a counter that prints the number of errors in a line
  * @_errnum: the will print the exit error code
  * @MYlinecount_flagIN: this is a counter for the input line
@@ -84,7 +84,7 @@ typedef struct passintel
 
 #define INTEL_INIT \
 {NULL, NULL, NULL, 0, 0, 0, 0, NULL, NULL, NULL, NULL, NULL, 0, 0, NULL, \
-        0, 0, 0}
+	0, 0, 0}
 
 /**
  * struct BUILT_IN - struct contains builtin string commands and its functions

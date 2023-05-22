@@ -43,7 +43,8 @@ int defchain_pfunc(intel_t *intel, char *charb, size_t *ptr)
  * @lg: length of buffer char to continue chaining
  * Return: Void
  */
-void extchain_pfunc(intel_t *intel, char *charb, size_t *ptr, size_t s, size_t lg)
+void extchain_pfunc(intel_t *intel, char *charb,
+		size_t *ptr, size_t s, size_t lg)
 {
 	size_t a = *ptr;
 
